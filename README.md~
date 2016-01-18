@@ -8,7 +8,7 @@ This SDK provides a Java classes and interfaces for access to iblazr 2 via CoreB
 > P.S.: current version was taken from our [Shotlight App](https://play.google.com/store/apps/details?id=com.concepterllc.shotlight&hl=ru) as is, if you don’t understand anything, don’t hesitate to contact us (see at [feedback](#feedback) section)
 
 ## How To Get Started
-* [Download iblazrSDK]() and try out the included  example iblazr2Demo app
+* [Download iblazrSDK](https://github.com/ConcepterDev/iblazr-sdk-android/archive/master.zip) and try out the included  example iblazr2Demo app
 * Read the "[Getting Started](#installation)" guide
 
 ### Installation
@@ -33,31 +33,22 @@ bleManager.scanLeDevice(true);
 
 Make flash
 ```java
-// setup custom temperature, you can set values from 0 to 0x7D
+// Set custom temperature, you can set values from 0 to 0x7D and check it. You can take BLEIblazrDevice in onDeviceDiscovered(final BLEIblazrDevice 
+// device) of OnIblazrDeviceDiscoverCallback
+BLEIblazrDevice bleIblazrDevice;
 bleIblazrDevice.setTemperature(0x7D);
 ```
 
 Send check notification to iblazr flash. You can manualy setup this effect. (Works with iblazr 2. Read additional documentation)
 ```java
-// setup custom time (miliseconds)
-NSInteger time = 2000;
-STDevice *device = {device}
-[deviceManager configDevice:device forCommand:STDeviceManagerComandStatus time:time temperature:lightTemperature power:lightPower];
+// set custom brightness, you can set value from 0 to 0x3F
+device.setBrightness(0x3F);
 ```
 
-Make constant light
-```objective-c
-// setup custom time (miliseconds)  or set 0 for infinite
-NSInteger time = 2000;
-STDevice *device = {device}
-[deviceManager configDevice:device STDeviceManagerComandLight time:time temperature:lightTemperature power:lightPower];
-```
 And Stop
-```objective-c
-// setup zero time
-NSInteger time = 0;
-STDevice *device = {device}
-[deviceManager configDevice:device STDeviceManagerComandStop time:time temperature:lightTemperature power:lightPower];
+```java
+// It sends zero time to iblazr2
+bleIblazrDevice.stop();
 ```
 
 ## Additional Resources
