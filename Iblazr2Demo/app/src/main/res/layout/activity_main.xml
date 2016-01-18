@@ -1,0 +1,137 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center">
+        <TableRow
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:gravity="center">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Press for testing"
+                android:id="@+id/buttonCnnect"
+                android:layout_gravity="left"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentStart="true"
+                android:layout_span="2" />
+        </TableRow>
+        <TableRow
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:text="Status: No Iblazr Connected"
+                android:id="@+id/isiblazr_connect"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/buttonCnnect"
+                android:layout_alignBottom="@+id/buttonCnnect"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_span="2"
+                android:layout_weight="10"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:text="1)Check iblazr"
+                android:gravity="right"
+                android:id="@+id/check_iblazr"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/buttonCnnect"
+                android:layout_alignBottom="@+id/buttonCnnect"
+                android:layout_marginTop="10dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Press"
+                android:id="@+id/buttonCheck"
+                android:layout_gravity="left"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentStart="true" />
+
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:text="2)Ckeck Warm Light"
+                android:gravity="right"
+                android:id="@+id/checkWarmLight"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/buttonCnnect"
+                android:layout_alignBottom="@+id/buttonCnnect"
+                android:layout_marginTop="10dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Press"
+                android:id="@+id/buttonCheckWarmLight"
+                android:layout_gravity="left"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:text="3)Check Cold light"
+                android:gravity="right"
+                android:id="@+id/warm_light"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/buttonCnnect"
+                android:layout_alignBottom="@+id/buttonCnnect"
+                android:layout_marginTop="10dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Press"
+                android:id="@+id/buttonCheckColdLight"
+                android:layout_gravity="left"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:text="4)Check the flash"
+                android:gravity="right"
+                android:id="@+id/cold_light"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/buttonCnnect"
+                android:layout_alignBottom="@+id/buttonCnnect"
+                android:layout_marginTop="10dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Press"
+                android:id="@+id/buttonCheckFlash"
+                android:layout_gravity="left"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent">
+
+            <Button
+                android:text="Dissconnect iblazr"
+                android:id="@+id/disconnect"
+                android:gravity="center"
+                android:layout_span="2" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
