@@ -14,7 +14,6 @@ This SDK provides a Java classes and interfaces for access to iblazr 2 via CoreB
 ### Installation
 In your Android Studio select File -> New -> Import Module and choose our iblazrbluetoothlib. Then add this Module Dependency ;)<br>
 
-```
 ### Device parameters
 Check `STDevice.h`,`STDeviceIblazr2.h` and `STDeviceIblazrOriginal.h` for get available parametrs.<br>
 `float lightPower` - value can be in range 0-16<br>
