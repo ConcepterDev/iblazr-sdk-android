@@ -34,13 +34,13 @@ Make flash
 // Set custom temperature, you can set values from 0 to 0x7D and check it. You can take BLEIblazrDevice in onDeviceDiscovered(final BLEIblazrDevice 
 // device) of OnIblazrDeviceDiscoverCallback
 BLEIblazrDevice bleIblazrDevice;
-bleIblazrDevice.setTemperature(0x7D);
+bleIblazrDevice.setTemperature(0x7D, BLEIblazrDevice.SHORT_LIGHT);
 ```
 
 Send check notification to iblazr flash. You can manualy setup this effect. (Works with iblazr 2. Read additional documentation)
 ```java
 // set custom brightness, you can set value from 0 to 0x3F
-device.setBrightness(0x3F);
+device.setBrightness(0x3F, BLEIblazrDevice.SHORT_LIGHT);
 ```
 
 And Stop

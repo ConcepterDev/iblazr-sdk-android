@@ -45,35 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private void initBLEManager() {
         final BluetoothManager bluetoothManager =
                 (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
-        bleManager = BLEManager.getInstance(bluetoothManager.getAdapter(), this,
-                new OnIblazrDeviceDiscoverCallback() {
-                    @Override
-                    public void onDeviceDiscovered(final BLEIblazrDevice device) {
-                        bleManager.addBleIblazrDevice(device);
-                        bleIblazrDevice = device;
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                isIblazrConnect.setText(CONNECTED);
-                            }
-                        });
-                    }
-
-                    @Override
-                    public void onDeviceGATTConnectionError(int status) {
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                isIblazrConnect.setText(NOT_CONNECTED);
-                            }
-                        });
-                    }
-
-                    @Override
-                    public void onServicesDiscoverError(int status) {
-
-                    }
-                });
+        bleManager = BLEManager.getInstance(bluetoothManager.getAdapter(), this);
     }
 
     private void setupViews() {
@@ -132,22 +104,22 @@ public class MainActivity extends AppCompatActivity {
     private void checkWarmLight(BLEIblazrDevice device) {
         if (device == null)
             return;
-        bleIblazrDevice.setTemperature(0x00);
+        bleIblazrDevice.setTemperature(0x00, BLEIblazrDevice.SHORT_LIGHT);
         bleIblazrDevice.light(AbstractIBlazrDevice.SHORT_LIGHT);
     }
 
     private void checkColdLight(BLEIblazrDevice device) {
         if (device == null)
             return;
-        bleIblazrDevice.setTemperature(0x7D);
+        bleIblazrDevice.setTemperature(0x7D, BLEIblazrDevice.SHORT_LIGHT);
         bleIblazrDevice.light(AbstractIBlazrDevice.SHORT_LIGHT);
     }
 
     private void checkIblazrFlash(BLEIblazrDevice device) {
         if (device == null)
             return;
-        device.setBrightness(0x3F);
-        device.setTemperature(0xC);
+        device.setBrightness(0x3F, BLEIblazrDevice.SHORT_LIGHT);
+        device.setTemperature(0xC, BLEIblazrDevice.SHORT_LIGHT);
         device.light(AbstractIBlazrDevice.SHORT_LIGHT);
     }
 
