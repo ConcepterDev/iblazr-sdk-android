@@ -1,1 +1,1 @@
-include ':app', ':iblazr2sdk'
+include ':app', ':iblazr2sdk', ':iblazr1lib'

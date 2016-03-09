@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Iblazr2Demo.iml" filepath="$PROJECT_DIR$/Iblazr2Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iblazr1lib/iblazr1lib.iml" filepath="$PROJECT_DIR$/iblazr1lib/iblazr1lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/iblazr2sdk/iblazr2sdk.iml" filepath="$PROJECT_DIR$/iblazr2sdk/iblazr2sdk.iml" />
     </modules>
   </component>

@@ -22,11 +22,17 @@ Check `STDevice.h`,`STDeviceIblazr2.h` and `STDeviceIblazrOriginal.h` for get av
 
 
 ### Start using
-Simple setup
+Simple setup for iblazr2
 ```java
 BLEManager bleManager = BLEManager.getInstance(bluetoothManager.getAdapter(), this, new OnIblazrDeviceDiscoverCallback());
 bleManager.findDeviceFromConnectedDevices();
 bleManager.scanLeDevice(true);
+```
+
+Simple setup for iblazr Original
+```java
+MJIblazrManager mjIblazrManager = MJIblazrManager.getInstance();
+registerReceiver(mjIblazrManager, new IntentFilter(Intent.ACTION_HEADSET_PLUG));
 ```
 
 Make flash

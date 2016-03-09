@@ -3,6 +3,8 @@ package com.concepter.iblazr2demo;
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothManager;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -16,6 +18,7 @@ import com.concepter.ibllazrbluetoothlib.AbstractIBlazrDevice;
 import com.concepter.ibllazrbluetoothlib.BLEIblazrDevice;
 import com.concepter.ibllazrbluetoothlib.BLEManager;
 import com.concepter.ibllazrbluetoothlib.OnIblazrDeviceDiscoverCallback;
+import com.iblazr.lib.IblazrWrappers.MJIblazrManager;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -34,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
         setupViews();
         initBLEManager();
         verifyBLESupportable();
+        registerIblazr1Receiver();
+    }
+
+    private void registerIblazr1Receiver(){
+        MJIblazrManager mjIblazrManager = MJIblazrManager.getInstance();
+        registerReceiver(mjIblazrManager, new IntentFilter(Intent.ACTION_HEADSET_PLUG));
     }
 
     private void verifyBLESupportable() {

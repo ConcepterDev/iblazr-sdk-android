@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">iblazrlib</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="dialog_message">Is this an iblazr?</string>
+</resources>

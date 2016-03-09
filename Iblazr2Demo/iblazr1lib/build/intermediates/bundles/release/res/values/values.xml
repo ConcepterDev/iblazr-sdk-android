@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="devices_scree_grey_light">#2d2d2d</color>
+    <color name="grey">#212121</color>
+    <color name="inactive_grey">#C9ffffff</color>
+    <color name="light_grey">#383838</color>
+    <color name="transp">#80000000</color>
+    <color name="transparent_black">#20000000</color>
+    <color name="transparent_devices_scree_grey_light">#992d2d2d</color>
+    <color name="transparent_grey">#99212121</color>
+    <color name="transparent_light_grey">#99383838</color>
+    <color name="transparent_white">#99ffffff</color>
+    <color name="white">#ffffffff</color>
+    <color name="yellow">#CDDF38</color>
+    <string name="app_name">iblazrlib</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+</resources>
